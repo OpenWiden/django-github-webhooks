@@ -1,0 +1,4 @@
+-r ./tests.txt
+
+Spinx>=3.1.0
+Django>=2.1
