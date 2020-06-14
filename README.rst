@@ -28,3 +28,10 @@ GitHub webhooks
 GitHub webhooks for Django.
 
 * Documentation: https://django-github-webhooks.readthedocs.io/en/latest/
+
+Features
+--------
+* Python >= 3.7
+* Django>=2.1
+* Full tested
+* Easily extendable

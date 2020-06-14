@@ -1,6 +1,25 @@
 Quickstart
 ===========
 
+Add app to `INSTALLED_APPS`:
+
+.. code-block:: python
+
+    INSTALLED_APPS = (
+        ...
+        "github_webhooks",
+        ...
+    )
+
+
+Add `SECRET` for `DJANGO_GITHUB_WEBHOOKS` in settings:
+
+.. code-block:: python
+
+    DJANGO_GITHUB_WEBHOOKS = {
+        "SECRET": "secret-key"
+    }
+
 Add URL patterns:
 
 .. code-block:: python
