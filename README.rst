@@ -5,9 +5,9 @@
 .. image:: https://img.shields.io/pypi/djversions/django-github-webhooks
     :alt: PyPI - Django Version
 
-.. image:: https://github.com/OpenWiden/django-github-webhooks/workflows/Python%20package/badge.svg?branch=master
-    :target: https://github.com/OpenWiden/django-github-webhooks/workflows/Python%20package/badge.svg?branch=master
-    :alt: Build status
+.. image:: https://github.com/OpenWiden/django-github-webhooks/workflows/Tests/badge.svg?branch=master
+    :target: https://github.com/OpenWiden/django-github-webhooks/workflows/Tests/badge.svg?branch=master
+    :alt: Tests passed
 
 .. image:: https://codecov.io/gh/OpenWiden/django-github-webhooks/branch/master/graph/badge.svg
     :target: https://codecov.io/gh/OpenWiden/django-github-webhooks
