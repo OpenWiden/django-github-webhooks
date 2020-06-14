@@ -10,6 +10,10 @@
     :target: https://django-github-webhooks.readthedocs.io/en/latest/?badge=latest
     :alt: Documentation Status
 
+.. image:: https://pyup.io/repos/github/OpenWiden/django-github-webhooks/shield.svg
+     :target: https://pyup.io/repos/github/OpenWiden/django-github-webhooks/
+     :alt: Updates
+
 ===============
 GitHub webhooks
 ===============
