@@ -8,7 +8,7 @@ with open("HISTORY.rst", "r") as history_file:
 
 setuptools.setup(
     name="django-github-webhooks",
-    version="0.1.0",
+    version="0.1.1",
     author="Alexandr Stefanitsky-Mozdor",
     author_email="stefanitsky.mozdor@gmail.com",
     description="Django GitHub webhooks",
