@@ -30,5 +30,7 @@ Table Of Contents
    :caption: Contents:
 
    installation
-   quickstart
+   configuration
+   user_guide
+   advanced_user_guide
    history
