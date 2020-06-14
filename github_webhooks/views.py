@@ -33,7 +33,7 @@ class GitHubWebhookView(View):
     def get_signal(cls, event: constants.Events) -> Signal:
         return getattr(signals, "{event}_signal".format(event=event))
 
-    def post(self, request: HttpRequest) -> JsonResponse:
+    def post(self, request: HttpRequest, **kwargs) -> JsonResponse:
         """
         Handles GitHub webhook income request.
         """
