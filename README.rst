@@ -1,3 +1,10 @@
+.. image:: https://img.shields.io/pypi/v/django-github-webhooks
+    :target: https://pypi.org/project/django-github-webhooks/
+    :alt: PyPI
+
+.. image:: https://img.shields.io/pypi/djversions/django-github-webhooks
+    :alt: PyPI - Django Version
+
 .. image:: https://github.com/OpenWiden/django-github-webhooks/workflows/Python%20package/badge.svg?branch=master
     :target: https://github.com/OpenWiden/django-github-webhooks/workflows/Python%20package/badge.svg?branch=master
     :alt: Build status
