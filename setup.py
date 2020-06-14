@@ -8,7 +8,7 @@ with open("HISTORY.rst", "r") as history_file:
 
 setuptools.setup(
     name="django-github-webhooks",
-    version="0.0.1",
+    version="0.1.0",
     author="Alexandr Stefanitsky-Mozdor",
     author_email="stefanitsky.mozdor@gmail.com",
     description="Django GitHub webhooks",
@@ -16,7 +16,8 @@ setuptools.setup(
     url="https://github.com/OpenWiden/django-github-webhooks",
     packages=["github_webhooks"],
     classifiers=[
-        "Framework :: Django :: 3",
+        "Framework :: Django :: 2.1",
+        "Framework :: Django :: 3.0",
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
