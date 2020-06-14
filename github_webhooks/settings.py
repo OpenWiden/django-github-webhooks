@@ -1,4 +1,5 @@
 from django.conf import settings as django_settings, ImproperlyConfigured
+from github_webhooks import constants
 
 
 def load_settings() -> None:
@@ -9,3 +10,6 @@ def load_settings() -> None:
 
     if not isinstance(settings, dict):
         raise ImproperlyConfigured("DJANGO_GITHUB_WEBHOOKS is not a dict!")
+
+    if "ALLOWED_EVENTS" not in settings:
+        settings["ALLOWED_EVENTS"] = constants.Events.values()

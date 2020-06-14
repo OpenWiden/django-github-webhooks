@@ -1,10 +1,13 @@
+import typing as t
+
+from django.dispatch import Signal
 from django.utils.decorators import method_decorator
 from django.views import View
 from django.http import HttpRequest, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.conf import settings, ImproperlyConfigured
 
-from . import constants, utils
+from . import constants, utils, signals
 
 
 @method_decorator(csrf_exempt, "dispatch")
@@ -18,6 +21,17 @@ class GitHubWebhookView(View):
             raise ImproperlyConfigured("SECRET key for DJANGO_GITHUB_WEBHOOKS is not specified!")
         else:
             return secret
+
+    def event_is_allowed(self) -> t.Tuple[bool, constants.Events]:
+        """
+        Validates that event is allowed.
+        """
+        event = self.request.META[constants.Headers.EVENT]
+        return event in settings.DJANGO_GITHUB_WEBHOOKS["ALLOWED_EVENTS"], event
+
+    @classmethod
+    def get_signal(cls, event: constants.Events) -> Signal:
+        return getattr(signals, "{event}_signal".format(event=event))
 
     def post(self, request: HttpRequest) -> JsonResponse:
         """
@@ -41,6 +55,15 @@ class GitHubWebhookView(View):
             # Validate signature value
             if utils.compare_signatures(signature, self.get_secret(), request.body) is False:
                 return JsonResponse({"detail": constants.X_HUB_SIGNATURE_HEADER_IS_INVALID}, status=400)
+
+            # Validate that event is allowed
+            is_allowed, event = self.event_is_allowed()
+            if is_allowed is False:
+                return JsonResponse({"detail": constants.EVENT_IS_NOT_ALLOWED.format(event=event)}, status=400)
+
+            # Send signal on success event
+            signal = self.get_signal(event)
+            signal.send(sender=self.__class__, payload=request.body)
 
             return JsonResponse({"detail": "Ok"})
 
