@@ -1,7 +1,8 @@
 import pytest
 from django.core.exceptions import ImproperlyConfigured
 
-from github_webhooks import settings as github_webhook_settings, constants
+from github_webhooks import constants
+from github_webhooks import settings as github_webhook_settings
 
 
 def test_load_settings_success() -> None:

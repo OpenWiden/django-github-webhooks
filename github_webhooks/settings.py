@@ -1,4 +1,6 @@
-from django.conf import settings as django_settings, ImproperlyConfigured
+from django.conf import ImproperlyConfigured
+from django.conf import settings as django_settings
+
 from github_webhooks import constants
 
 

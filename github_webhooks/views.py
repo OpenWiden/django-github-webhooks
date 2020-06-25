@@ -1,13 +1,13 @@
 import typing as t
 
+from django.conf import ImproperlyConfigured, settings
 from django.dispatch import Signal
+from django.http import HttpRequest, JsonResponse
 from django.utils.decorators import method_decorator
 from django.views import View
-from django.http import HttpRequest, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
-from django.conf import settings, ImproperlyConfigured
 
-from . import constants, utils, signals
+from . import constants, signals, utils
 
 
 @method_decorator(csrf_exempt, "dispatch")

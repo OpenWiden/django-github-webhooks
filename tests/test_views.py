@@ -4,7 +4,8 @@ import pytest
 from django.core.exceptions import ImproperlyConfigured
 from django.http import HttpResponse
 from django.test import RequestFactory
-from github_webhooks import views, constants, signals
+
+from github_webhooks import constants, signals, views
 
 
 class TestGitHubWebhookView:

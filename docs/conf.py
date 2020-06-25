@@ -13,11 +13,12 @@
 import os
 import sys
 
+import github_webhooks
+
 cwd = os.getcwd()
 parent = os.path.dirname(cwd)
 sys.path.append(parent)
 
-import github_webhooks
 
 # -- Project information -----------------------------------------------------
 
