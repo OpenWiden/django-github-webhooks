@@ -140,3 +140,6 @@ dmypy.json
 media/
 staticfiles/
 !staticfiles/.gitkeep
+
+# OSX
+.DS_Store
