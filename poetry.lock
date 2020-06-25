@@ -642,13 +642,13 @@ testing = ["jaraco.itertools", "func-timeout"]
 
 [extras]
 black = ["black"]
-dev = ["tox", "pytest", "pytest-django", "pytest-cov", "sphinx"]
+dev = ["tox", "pytest", "pytest-django", "pytest-cov", "sphinx", "black", "isort"]
 docs = ["sphinx"]
 isort = ["isort"]
 test = ["pytest", "pytest-django", "pytest-cov"]
 
 [metadata]
-content-hash = "08b657dae9be10dbaa1d3270e5ad136b21c5a4db9ab9683cc72252b6d0a942c2"
+content-hash = "f4e59e9926f0dddce4a5311bf5c3d4bb8180409af3b7d1750c35a9ae1f296726"
 python-versions = "^3.6"
 
 [metadata.files]
