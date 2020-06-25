@@ -6,4 +6,5 @@ class GitHubWebhooksApp(AppConfig):
 
     def ready(self):
         from . import settings
+
         settings.load_settings()

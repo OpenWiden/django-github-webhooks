@@ -21,4 +21,6 @@ def test_github_webhooks_settings_is_not_a_dict(settings) -> None:
 
 
 def test_allowed_events_defaults_set(settings) -> None:
-    assert settings.DJANGO_GITHUB_WEBHOOKS["ALLOWED_EVENTS"] == constants.Events.values()
+    assert (
+        settings.DJANGO_GITHUB_WEBHOOKS["ALLOWED_EVENTS"] == constants.Events.values()
+    )
