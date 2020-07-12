@@ -33,7 +33,7 @@ class GitHubWebhookView(View):
 
     @classmethod
     def get_signal(cls, event: constants.Events) -> Signal:
-        return getattr(signals, "{event}_signal".format(event=event))
+        return getattr(signals, event)
 
     def post(self, request: HttpRequest, **kwargs) -> JsonResponse:
         """
