@@ -1,3 +1,4 @@
+import json
 import typing as t
 
 from django.conf import ImproperlyConfigured, settings
@@ -82,7 +83,7 @@ class GitHubWebhookView(View):
 
             # Send signal on success event
             signal = self.get_signal(event)
-            signal.send(sender=self.__class__, payload=request.body)
+            signal.send(sender=self.__class__, payload=json.loads(request.body))
 
             return JsonResponse({"detail": "Ok"})
 

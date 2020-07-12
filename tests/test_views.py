@@ -139,10 +139,20 @@ class TestGitHubWebhookView:
             ),
             constants.Headers.EVENT: constants.Events.ISSUES,
         }
+
+        # Test signal send & payload type (should convert binary to dict)
+        if expected_status_code == 200:
+            def handle_issues_event(payload: dict, **kwargs) -> None:
+                assert payload == {"test": "ok"}
+
+            signals.issues.connect(handle_issues_event)
+
+        # Create request and save view response
         request = rf.post("/fake-url/", **headers)
         request._body = '{"test": "ok"}'.encode()
         view = views.GitHubWebhookView(request=request)
         response = view.post(request)
 
+        # Test response
         assert response.status_code == expected_status_code
         assert json.loads(response.content.decode()) == expected_response
