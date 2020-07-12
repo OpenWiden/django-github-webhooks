@@ -31,7 +31,7 @@ GitHub webhooks for Django.
 
 Features
 --------
-* Python >= 3.7
-* Django>=2.1
-* Full tested
-* Easily extendable
+* Python >= 3.7.
+* Django >= 2.1.
+* Fully tested.
+* Easily extendable.
