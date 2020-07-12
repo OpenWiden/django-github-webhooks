@@ -13,8 +13,6 @@
 import os
 import sys
 
-import github_webhooks
-
 cwd = os.getcwd()
 parent = os.path.dirname(cwd)
 sys.path.append(parent)
@@ -27,9 +25,7 @@ copyright = "2020, stefanitsky"
 author = "stefanitsky"
 
 # The full version, including alpha/beta/rc tags
-version = github_webhooks.__version__
-# The full version, including alpha/beta/rc tags.
-release = github_webhooks.__version__
+version = "1.0.0"
 
 
 # -- General configuration ---------------------------------------------------
