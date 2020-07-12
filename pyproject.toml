@@ -4,7 +4,7 @@ build-backend = "poetry.masonry.api"
 
 [tool.poetry]
 name = "django-github-webhooks"
-version = "1.0.0"
+version = "1.1.0"
 description = "GitHub webhooks for Django."
 authors = ["stefanitsky <stefanitsky.mozdor@gmail.com>"]
 readme = "README.rst"

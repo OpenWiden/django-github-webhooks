@@ -25,7 +25,7 @@ copyright = "2020, stefanitsky"
 author = "stefanitsky"
 
 # The full version, including alpha/beta/rc tags
-version = "1.0.0"
+version = "1.1.0"
 
 
 # -- General configuration ---------------------------------------------------
